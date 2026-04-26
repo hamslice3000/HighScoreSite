@@ -1,0 +1,124 @@
+---
+files:
+  certificate:
+    _wildcard__highscore_a2hosted_com_c4f65_28647_1776344793_5a5bacb78ff33a62ab14183968030108:
+      created: '1768572305'
+      domains:
+        - "*.highscore.a2hosted.com"
+        - highscore.a2hosted.com
+      ecdsa_curve_name: ~
+      ecdsa_public: ~
+      friendly_name: Cert for “highscore.a2hosted.com” 1768572305.0
+      id: _wildcard__highscore_a2hosted_com_c4f65_28647_1776344793_5a5bacb78ff33a62ab14183968030108
+      is_self_signed: 0
+      issuer.commonName: R12
+      issuer.organizationName: Let's Encrypt
+      key_algorithm: rsaEncryption
+      modulus: c4f6517555771f1d184396f451d88130e221ebedad35a8c119ed07cec70e76e844bfefff532cc7ee2e12452debf0bd8843de060c21bf5b0c726cd39e7c89dafb78942503466bdf35f7d33ee26f993e6e46a6f138f05d48e82fda3f132cd6932da9d60db6d9832549de0aceeebe8719d3bc66f5c82d032ec32ba7e6a0ba7b2f185de995508d9673772ae444931dcac1ff6be912e80fefe97affb4bd2389e909ddf828fa8d74484f2b9a7bdf0c6b9e9eb64d4156046b4a9c4832471c48cc45ddfd4f48713ae3ddafc462887476a51b1c827f8332043c05eb3c59a6e6f424cba85fff2288fb9890850e0d619d53c0a12674a9ad86cff576ad5520264d5650e28647
+      modulus_length: 2048
+      not_after: '1776344793'
+      not_before: '1768568794'
+      serial: 0512d4fd15d6eae1f4f922e232387b46a215
+      signature_algorithm: sha256WithRSAEncryption
+      subject.commonName: "*.highscore.a2hosted.com"
+      validation_type: dv
+    _wildcard__highscore_a2hosted_com_d15c0_d987d_1781624777_453bb2bb74f67d9c27e06103e14e4cfd:
+      created: '1773852290'
+      domains:
+        - "*.highscore.a2hosted.com"
+        - highscore.a2hosted.com
+      ecdsa_curve_name: ~
+      ecdsa_public: ~
+      friendly_name: Cert for “highscore.a2hosted.com”
+      id: _wildcard__highscore_a2hosted_com_d15c0_d987d_1781624777_453bb2bb74f67d9c27e06103e14e4cfd
+      is_self_signed: 0
+      issuer.commonName: R13
+      issuer.organizationName: Let's Encrypt
+      key_algorithm: rsaEncryption
+      modulus: d15c0ab2770a162ee524c472e5657763a1afcc5a302a96dfc425aaa6e8bce12710fcec821f2e8bfb37909acde8c8dea4f8870ad06883ae1ba15d8358c1476759de5a5bd93d8dbe750eb1b59eb99136a75886dfd6958dcc7af28964c8713d5b019a1d51f2c5afe4a373548c4e4c43049e9218131559aedb7bf1f16a1fa1df40cb85a5139bf426353050d1cdf0e4099a92d23107c8c8e180b23a7159ed2010e664f4f544fb6c8d6bd7a14f3becff4a6af91ebfae4216076fea8c8f5c8854b1472dbc258e374f9c51723c23217dc7e5b2f3a43011977f5f8b76c98ab5b4c35cae859647294b2fbd0f4d6d3f324b094b728ba75bf9e71e0fea1785b21b5c7cdd987d
+      modulus_length: 2048
+      not_after: '1781624777'
+      not_before: '1773848778'
+      serial: 0600e379f70adb1c7e5bdabe7605c2ba20b5
+      signature_algorithm: sha256WithRSAEncryption
+      subject.commonName: "*.highscore.a2hosted.com"
+      validation_type: dv
+    highscore_a2hosted_com_c3dbe_082b9_1771073715_ab3f7b42a4498ab8bb911e93e31abb03:
+      created: '1763301226'
+      domains:
+        - "*.highscore.a2hosted.com"
+        - highscore.a2hosted.com
+      ecdsa_curve_name: ~
+      ecdsa_public: ~
+      friendly_name: Cert for “highscore.a2hosted.com” 1763301226.0
+      id: highscore_a2hosted_com_c3dbe_082b9_1771073715_ab3f7b42a4498ab8bb911e93e31abb03
+      is_self_signed: 0
+      issuer.commonName: R12
+      issuer.organizationName: Let's Encrypt
+      key_algorithm: rsaEncryption
+      modulus: c3dbebe64050a9962007e307f1ea46e99dfff02cc48cc62e98c95a7ed1435173895aae0e854bfe9c51be983c7ed02cb9cb4d17cddcdbccf54625a9d63864cfc5329c5f8be726dcd9e0d7e2d90c94987b2a7665ea947165417b53fdd0aa326429bca073bf7469e69fa6c429cdad425b8edfa46d52c08724189da59c36e317dc0029643346d1fa55ad84ecadd8bbb189e12de826ba7cf26af76df7caf9303d8dc8a7bbc8d35fd89cb31b91f4bf93de5bc94ea32abeed37ef27f7a04000b851a4cef1c6913d625338076b7926e1eb49525fef65d30d8354a4a69d51828b091c170227da35ac4033c1cfa854a72ab2847b4fe308da37c12e5a583db1d679d7f082b9
+      modulus_length: 2048
+      not_after: '1771073715'
+      not_before: '1763297716'
+      serial: 054cc8f77f547ff031282706fa3beb1f7e86
+      signature_algorithm: sha256WithRSAEncryption
+      subject.commonName: highscore.a2hosted.com
+      validation_type: dv
+  key:
+    c3dbe_082b9_332ffb5f518ac1a21fe2334f43748a9a:
+      created: '1763301226'
+      ecdsa_curve_name: ~
+      ecdsa_public: ~
+      friendly_name: Key for “highscore.a2hosted.com”
+      id: c3dbe_082b9_332ffb5f518ac1a21fe2334f43748a9a
+      key_algorithm: rsaEncryption
+      modulus: c3dbebe64050a9962007e307f1ea46e99dfff02cc48cc62e98c95a7ed1435173895aae0e854bfe9c51be983c7ed02cb9cb4d17cddcdbccf54625a9d63864cfc5329c5f8be726dcd9e0d7e2d90c94987b2a7665ea947165417b53fdd0aa326429bca073bf7469e69fa6c429cdad425b8edfa46d52c08724189da59c36e317dc0029643346d1fa55ad84ecadd8bbb189e12de826ba7cf26af76df7caf9303d8dc8a7bbc8d35fd89cb31b91f4bf93de5bc94ea32abeed37ef27f7a04000b851a4cef1c6913d625338076b7926e1eb49525fef65d30d8354a4a69d51828b091c170227da35ac4033c1cfa854a72ab2847b4fe308da37c12e5a583db1d679d7f082b9
+      modulus_length: 2048
+    c4f65_28647_f45267aa0eaae8216dfa3064e9c68d87:
+      created: '1768572305'
+      ecdsa_curve_name: ~
+      ecdsa_public: ~
+      friendly_name: Key for “highscore.a2hosted.com” 1768572305.0
+      id: c4f65_28647_f45267aa0eaae8216dfa3064e9c68d87
+      key_algorithm: rsaEncryption
+      modulus: c4f6517555771f1d184396f451d88130e221ebedad35a8c119ed07cec70e76e844bfefff532cc7ee2e12452debf0bd8843de060c21bf5b0c726cd39e7c89dafb78942503466bdf35f7d33ee26f993e6e46a6f138f05d48e82fda3f132cd6932da9d60db6d9832549de0aceeebe8719d3bc66f5c82d032ec32ba7e6a0ba7b2f185de995508d9673772ae444931dcac1ff6be912e80fefe97affb4bd2389e909ddf828fa8d74484f2b9a7bdf0c6b9e9eb64d4156046b4a9c4832471c48cc45ddfd4f48713ae3ddafc462887476a51b1c827f8332043c05eb3c59a6e6f424cba85fff2288fb9890850e0d619d53c0a12674a9ad86cff576ad5520264d5650e28647
+      modulus_length: 2048
+    d15c0_d987d_8deca9468a14afce5d73579b6bd1d700:
+      created: '1773852290'
+      ecdsa_curve_name: ~
+      ecdsa_public: ~
+      friendly_name: Key for “highscore.a2hosted.com” 1773852290.0
+      id: d15c0_d987d_8deca9468a14afce5d73579b6bd1d700
+      key_algorithm: rsaEncryption
+      modulus: d15c0ab2770a162ee524c472e5657763a1afcc5a302a96dfc425aaa6e8bce12710fcec821f2e8bfb37909acde8c8dea4f8870ad06883ae1ba15d8358c1476759de5a5bd93d8dbe750eb1b59eb99136a75886dfd6958dcc7af28964c8713d5b019a1d51f2c5afe4a373548c4e4c43049e9218131559aedb7bf1f16a1fa1df40cb85a5139bf426353050d1cdf0e4099a92d23107c8c8e180b23a7159ed2010e664f4f544fb6c8d6bd7a14f3becff4a6af91ebfae4216076fea8c8f5c8854b1472dbc258e374f9c51723c23217dc7e5b2f3a43011977f5f8b76c98ab5b4c35cae859647294b2fbd0f4d6d3f324b094b728ba75bf9e71e0fea1785b21b5c7cdd987d
+      modulus_length: 2048
+indexes:
+  certificate:
+    modulus:
+      c3dbebe64050a9962007e307f1ea46e99dfff02cc48cc62e98c95a7ed1435173895aae0e854bfe9c51be983c7ed02cb9cb4d17cddcdbccf54625a9d63864cfc5329c5f8be726dcd9e0d7e2d90c94987b2a7665ea947165417b53fdd0aa326429bca073bf7469e69fa6c429cdad425b8edfa46d52c08724189da59c36e317dc0029643346d1fa55ad84ecadd8bbb189e12de826ba7cf26af76df7caf9303d8dc8a7bbc8d35fd89cb31b91f4bf93de5bc94ea32abeed37ef27f7a04000b851a4cef1c6913d625338076b7926e1eb49525fef65d30d8354a4a69d51828b091c170227da35ac4033c1cfa854a72ab2847b4fe308da37c12e5a583db1d679d7f082b9:
+        highscore_a2hosted_com_c3dbe_082b9_1771073715_ab3f7b42a4498ab8bb911e93e31abb03: ~
+      c4f6517555771f1d184396f451d88130e221ebedad35a8c119ed07cec70e76e844bfefff532cc7ee2e12452debf0bd8843de060c21bf5b0c726cd39e7c89dafb78942503466bdf35f7d33ee26f993e6e46a6f138f05d48e82fda3f132cd6932da9d60db6d9832549de0aceeebe8719d3bc66f5c82d032ec32ba7e6a0ba7b2f185de995508d9673772ae444931dcac1ff6be912e80fefe97affb4bd2389e909ddf828fa8d74484f2b9a7bdf0c6b9e9eb64d4156046b4a9c4832471c48cc45ddfd4f48713ae3ddafc462887476a51b1c827f8332043c05eb3c59a6e6f424cba85fff2288fb9890850e0d619d53c0a12674a9ad86cff576ad5520264d5650e28647:
+        _wildcard__highscore_a2hosted_com_c4f65_28647_1776344793_5a5bacb78ff33a62ab14183968030108: ~
+      d15c0ab2770a162ee524c472e5657763a1afcc5a302a96dfc425aaa6e8bce12710fcec821f2e8bfb37909acde8c8dea4f8870ad06883ae1ba15d8358c1476759de5a5bd93d8dbe750eb1b59eb99136a75886dfd6958dcc7af28964c8713d5b019a1d51f2c5afe4a373548c4e4c43049e9218131559aedb7bf1f16a1fa1df40cb85a5139bf426353050d1cdf0e4099a92d23107c8c8e180b23a7159ed2010e664f4f544fb6c8d6bd7a14f3becff4a6af91ebfae4216076fea8c8f5c8854b1472dbc258e374f9c51723c23217dc7e5b2f3a43011977f5f8b76c98ab5b4c35cae859647294b2fbd0f4d6d3f324b094b728ba75bf9e71e0fea1785b21b5c7cdd987d:
+        _wildcard__highscore_a2hosted_com_d15c0_d987d_1781624777_453bb2bb74f67d9c27e06103e14e4cfd: ~
+    subject.commonName:
+      "*.highscore.a2hosted.com":
+        _wildcard__highscore_a2hosted_com_c4f65_28647_1776344793_5a5bacb78ff33a62ab14183968030108: ~
+        _wildcard__highscore_a2hosted_com_d15c0_d987d_1781624777_453bb2bb74f67d9c27e06103e14e4cfd: ~
+      highscore.a2hosted.com:
+        highscore_a2hosted_com_c3dbe_082b9_1771073715_ab3f7b42a4498ab8bb911e93e31abb03: ~
+uniques:
+  certificate:
+    friendly_name:
+      Cert for “highscore.a2hosted.com”: _wildcard__highscore_a2hosted_com_d15c0_d987d_1781624777_453bb2bb74f67d9c27e06103e14e4cfd
+      Cert for “highscore.a2hosted.com” 1763301226.0: highscore_a2hosted_com_c3dbe_082b9_1771073715_ab3f7b42a4498ab8bb911e93e31abb03
+      Cert for “highscore.a2hosted.com” 1768572305.0: _wildcard__highscore_a2hosted_com_c4f65_28647_1776344793_5a5bacb78ff33a62ab14183968030108
+  key:
+    friendly_name:
+      Key for “highscore.a2hosted.com”: c3dbe_082b9_332ffb5f518ac1a21fe2334f43748a9a
+      Key for “highscore.a2hosted.com” 1768572305.0: c4f65_28647_f45267aa0eaae8216dfa3064e9c68d87
+      Key for “highscore.a2hosted.com” 1773852290.0: d15c0_d987d_8deca9468a14afce5d73579b6bd1d700
+    modulus:ecdsa_curve_name:ecdsa_public:
+      c3dbebe64050a9962007e307f1ea46e99dfff02cc48cc62e98c95a7ed1435173895aae0e854bfe9c51be983c7ed02cb9cb4d17cddcdbccf54625a9d63864cfc5329c5f8be726dcd9e0d7e2d90c94987b2a7665ea947165417b53fdd0aa326429bca073bf7469e69fa6c429cdad425b8edfa46d52c08724189da59c36e317dc0029643346d1fa55ad84ecadd8bbb189e12de826ba7cf26af76df7caf9303d8dc8a7bbc8d35fd89cb31b91f4bf93de5bc94ea32abeed37ef27f7a04000b851a4cef1c6913d625338076b7926e1eb49525fef65d30d8354a4a69d51828b091c170227da35ac4033c1cfa854a72ab2847b4fe308da37c12e5a583db1d679d7f082b9: c3dbe_082b9_332ffb5f518ac1a21fe2334f43748a9a
+      c4f6517555771f1d184396f451d88130e221ebedad35a8c119ed07cec70e76e844bfefff532cc7ee2e12452debf0bd8843de060c21bf5b0c726cd39e7c89dafb78942503466bdf35f7d33ee26f993e6e46a6f138f05d48e82fda3f132cd6932da9d60db6d9832549de0aceeebe8719d3bc66f5c82d032ec32ba7e6a0ba7b2f185de995508d9673772ae444931dcac1ff6be912e80fefe97affb4bd2389e909ddf828fa8d74484f2b9a7bdf0c6b9e9eb64d4156046b4a9c4832471c48cc45ddfd4f48713ae3ddafc462887476a51b1c827f8332043c05eb3c59a6e6f424cba85fff2288fb9890850e0d619d53c0a12674a9ad86cff576ad5520264d5650e28647: c4f65_28647_f45267aa0eaae8216dfa3064e9c68d87
+      d15c0ab2770a162ee524c472e5657763a1afcc5a302a96dfc425aaa6e8bce12710fcec821f2e8bfb37909acde8c8dea4f8870ad06883ae1ba15d8358c1476759de5a5bd93d8dbe750eb1b59eb99136a75886dfd6958dcc7af28964c8713d5b019a1d51f2c5afe4a373548c4e4c43049e9218131559aedb7bf1f16a1fa1df40cb85a5139bf426353050d1cdf0e4099a92d23107c8c8e180b23a7159ed2010e664f4f544fb6c8d6bd7a14f3becff4a6af91ebfae4216076fea8c8f5c8854b1472dbc258e374f9c51723c23217dc7e5b2f3a43011977f5f8b76c98ab5b4c35cae859647294b2fbd0f4d6d3f324b094b728ba75bf9e71e0fea1785b21b5c7cdd987d: d15c0_d987d_8deca9468a14afce5d73579b6bd1d700

@@ -1,0 +1,84 @@
+ <!doctype html>
+ <html lang="en">
+ 
+ <head>
+    <meta charset="utf-8"> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <meta name="High Score"> 
+ </head>
+
+
+<body class="body" style="background-color:#25383C;">
+  
+
+<style type="text/css" media="screen">
+    .lot a{ 
+        color: #FFFFFF;
+        text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 5px #fff, 
+        0 0 10px #00FFFF, 0 0 50px #00FFFF, 0 0 80px #00FFFF, 
+        0 0 100px #00FFFF, 0 0 150px #00FFFF; 
+        font-family:arial; 
+        font-size: 32pt;
+        font-weight:bold;
+        text-decoration: none;
+        margin: 0 auto;
+        clear:both;
+    } 
+    ul {
+        list-style-type: none;
+        padding: 0 0px;
+        margin: 0 0px;
+    }    
+    li {
+        list-style-type: none;
+    }
+    .tableLeft{
+      display: inline-block;
+      text-align: left;
+      padding: 10px;
+    }
+    .tableRight{
+      display: inline-block;
+      text-align: right;
+      padding: 10px;
+    }
+    .tableCenter{
+      display: inline-block;
+      text-align: center;
+      padding: 400px;
+      -webkit-animation: pulsate 5s ease-out;
+      -webkit-animation-iteration-count: infinite; 
+      opacity: 0.0
+    }
+
+    @-webkit-keyframes pulsate {
+      0% {-webkit-transform: scale(0.6, 0.6); opacity: 0.5;}
+      50% {opacity: 3.0;}
+      100% {-webkit-transform: scale(4.0, 4.0); opacity: 2.0;}
+    }
+ 
+</style>
+
+   <div id="latest" class = "tableCenter">
+      {% for entry in latest_entry %}
+        <li class = "lot"> <a> {{"* LATEST ENTRY *"}}</a> </li>
+        <li class = "lot"><a href="/entries/{{ entry.id }}/"> <span id="entry-text">{{ entry.text }}</span> <span id="score">{{ entry.score }}</span></a></li>
+      {% endfor %}
+    </div>
+
+
+ <script>
+  setTimeout(function() {
+    $.ajax({      
+        url: "",
+        context: document.body,
+        success: function(s,x){
+            $(this).html(s);
+        }
+    });
+   }, 5000);
+ </script>
+ 
+</body> 
+  
+</html>

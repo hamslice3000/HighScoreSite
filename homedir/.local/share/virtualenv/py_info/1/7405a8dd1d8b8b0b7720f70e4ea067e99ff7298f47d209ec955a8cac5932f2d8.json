@@ -1,0 +1,70 @@
+{
+  "content": {
+    "_creators": null,
+    "architecture": 64,
+    "base_exec_prefix": null,
+    "base_prefix": null,
+    "distutils_install": {
+      "data": "",
+      "headers": "include/python2.7/UNKNOWN",
+      "platlib": "lib64/python2.7/site-packages",
+      "purelib": "lib/python2.7/site-packages",
+      "scripts": "bin"
+    },
+    "exec_prefix": "/opt/alt/python27",
+    "executable": "/opt/alt/python27/bin/python2.7",
+    "file_system_encoding": "UTF-8",
+    "has_venv": false,
+    "implementation": "CPython",
+    "max_size": 9223372036854775807,
+    "original_executable": "/opt/alt/python27/bin/python2.7",
+    "os": "posix",
+    "path": [
+      "/opt/alt/python37/lib/python3.7/site-packages/virtualenv/discovery",
+      "/opt/alt/python27/lib/python27.zip",
+      "/opt/alt/python27/lib64/python2.7",
+      "/opt/alt/python27/lib64/python2.7/plat-linux2",
+      "/opt/alt/python27/lib64/python2.7/lib-tk",
+      "/opt/alt/python27/lib64/python2.7/lib-old",
+      "/opt/alt/python27/lib64/python2.7/lib-dynload",
+      "/opt/alt/python27/lib64/python2.7/site-packages",
+      "/opt/alt/python27/lib/python2.7/site-packages"
+    ],
+    "platform": "linux2",
+    "prefix": "/opt/alt/python27",
+    "real_prefix": null,
+    "stdout_encoding": null,
+    "sysconfig": {
+      "makefile_filename": "/opt/alt/python27/lib64/python2.7/config/Makefile"
+    },
+    "sysconfig_paths": {
+      "data": "{base}",
+      "include": "{base}/include/python{py_version_short}",
+      "platlib": "{platbase}/lib64/python{py_version_short}/site-packages",
+      "platstdlib": "{platbase}/lib64/python{py_version_short}",
+      "purelib": "{base}/lib/python{py_version_short}/site-packages",
+      "scripts": "{base}/bin",
+      "stdlib": "{base}/lib64/python{py_version_short}"
+    },
+    "sysconfig_scheme": null,
+    "sysconfig_vars": {
+      "PYTHONFRAMEWORK": "",
+      "base": "/opt/alt/python27",
+      "platbase": "/opt/alt/python27",
+      "py_version_short": "2.7"
+    },
+    "system_executable": "/opt/alt/python27/bin/python2.7",
+    "system_stdlib": "/opt/alt/python27/lib64/python2.7",
+    "system_stdlib_platform": "/opt/alt/python27/lib64/python2.7",
+    "version": "2.7.18 (default, Feb 14 2022, 08:49:01) \n[GCC 8.5.0 20210514 (Red Hat 8.5.0-4)]",
+    "version_info": {
+      "major": 2,
+      "micro": 18,
+      "minor": 7,
+      "releaselevel": "final",
+      "serial": 0
+    }
+  },
+  "path": "/opt/alt/python27/bin/python2.7",
+  "st_mtime": 1644846677.0
+}

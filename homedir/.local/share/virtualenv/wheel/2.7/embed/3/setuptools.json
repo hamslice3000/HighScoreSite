@@ -1,0 +1,13 @@
+{
+  "completed": "2022-07-12T14:35:33.987726Z",
+  "periodic": true,
+  "started": "2022-07-12T14:35:29.899449Z",
+  "versions": [
+    {
+      "filename": "setuptools-44.1.1-py2.py3-none-any.whl",
+      "found_date": "2022-07-12T14:35:31.347422Z",
+      "release_date": "2020-05-29T01:06:05.000000Z",
+      "source": "periodic"
+    }
+  ]
+}

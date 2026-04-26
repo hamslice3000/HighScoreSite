@@ -1,0 +1,93 @@
+ <!doctype html>
+
+ <html lang="en">
+ 
+ <head>
+    <meta charset="utf-8"> 
+    <!-- <script src="{{STATIC_URL}}jquery-1.9.1.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+    <meta name="High Score"> 
+    <!-- <link rel="stylesheet" href="css/style.css?v=1"> -->
+ </head>
+
+
+<body class="body" style="background-color:#25383C;">
+  
+<style type="text/css" media="screen">
+  
+    .lot a{ 
+        color: #FFFFFF;
+        text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 5px #fff, 
+        0 0 10px #FFFFFF, 0 0 50px #BF5FFF, 0 0 80px #BF5FFF, 
+        0 0 100px #BF5FFF, 0 0 150px #BF5FFF; 
+        font-family:arial; 
+        font-size: 32pt;
+        font-weight:bold;
+        text-decoration: none;
+        margin: 0 0;
+        clear:both;
+    }   
+    ul {
+        list-style-type: none;
+        padding: 0 0px;
+        margin: 0 0px;
+    }    
+    li {
+        list-style-type: none;
+    }  
+
+    .tableCenter{
+      display: inline-block;
+      text-align: center;
+      padding: 200px;
+      -webkit-animation: pulsate 10s ease-out;
+      -webkit-animation-iteration-count: infinite; 
+      opacity: 0.0
+    }
+
+    @-webkit-keyframes pulsate {
+      0% {-webkit-transform: scale(2.0, 2.0); opacity: 1.0;}
+      50% {opacity: 3.0;}
+      100% {-webkit-transform: scale(05., 0.5); opacity: 0.5;}
+    }
+  
+ </style> 
+ 
+     
+     <div id="lottery_Winner" class = "tableCenter">
+      {% for entry in lottery_winner %}
+        <li class = "lot"> <a> {{"* LOTTERY WINNER *"}}</a> </li>
+        <li class = "lot"><a href="/entries/{{ entry.id }}/"> <span id="entry-text">{{ entry.text }}</span> <span id="score">{{ entry.score }}</span></a></li>
+        <script>
+          $(document).ready(function() {
+            var currentid = {{entry.id}};
+            var args = {'lotteryid':currentid};
+            $.get("/lotteryWinner/", args).done(function(data) {
+                    $("#score").text(data);     
+               });
+           });
+        </script>
+      {% endfor %}
+      </div>
+
+  <script>
+ 
+
+  window.setTimeout(win, 10000);
+
+  function win(){
+      $.ajax({      
+          url: "",
+          context: document.getElementById("lottery_Winner"),
+          success: function(data){
+             $("#lottery_Winner").html(data);
+          }
+      });
+    }
+    
+  </script>
+
+</body> 
+
+</html>

@@ -1,0 +1,251 @@
+ <!doctype html>
+ <html style="background-color: #25383C;">
+ <html lang="en">
+ 
+ <head>
+    <meta charset="utf-8"> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <meta name="High Score Voting"> 
+    <!--<link rel="stylesheet" href="css/style.css?v=1">-->
+    <script>
+        function voteUp(voteupid){
+			var args = {'voteid':voteupid };	//current id is used
+			$.get("/voteup/", args).done(function(data) { //when .get is done, returns data from views(score)                   
+                $("#score").text(data); //span updates score with new value from views
+				location.reload();
+			});
+			return false;
+		}
+		function voteDown(votedownid){
+			var args = {'voteid':votedownid };	//current id is used
+			$.get("/votedown/", args).done(function(data) { //when .get is done, returns data from views(score)                   
+                $("#score").text(data); //span updates score with new value from views
+				location.reload();
+			});
+			return false;
+		}
+    </script>
+    
+    <style type="text/css" media="screen"> <!--needed???-->
+
+        .buttons {
+           text-decoration: none;
+        }
+    	
+    	.buttonup {
+        	text-decoration: none;
+        	border-radius: 10%;
+        	border: 2px #00ff00 solid; 
+        	width: 85px;
+        	height: 30px;
+        	text-align: center;
+        	position: relative;
+        	background-color: #25383C;
+        	box-shadow: 0 2px 5px #00ff00;
+    	}
+    	
+    	.buttondown {
+        	text-decoration: none;
+        	border-radius: 10%;
+        	border: 2px #fc4c4c solid; 
+        	width: 85px;
+        	height: 30px;
+        	text-align: center;
+        	background-color: #25383C;
+        	box-shadow: 0 2px 5px #fc4c4c;
+    	}
+    	
+    	.buttonup:hover {
+            box-shadow: 0 0px 10px #00ff00;
+        }
+        
+        .buttonup:active{
+            box-shadow: 0 1px 5px #00ff00;
+            background-color: #00ff00;
+        }
+    	
+    	.buttontextup{
+            color: #FFFFFF;
+            text-shadow: 
+            0 0 0.5px #fff, 
+            0 0 1px #fff, 
+            0 0 2px #00ff00, 
+            0 0 3px #00ff00, 
+            0 0 5px #00ff00, 
+            0 0 7px #00ff00, 
+            0 0 15px #00ff00, 
+            0 0 30px #00ff00,
+            0 0 50px #00ff00;
+            font-family:arial; 
+            font-size: 10pt;
+            text-decoration: none;
+        }
+    	
+    	.buttondown:hover {
+            box-shadow: 0 0px 10px #fc4c4c;
+        }
+        
+        .buttondown:active{
+            box-shadow: 0 1px 5px #fc4c4c;
+            background-color: #fc4c4c;
+        }
+    	
+    	.buttontextdown{
+            color: #FFFFFF;
+            text-shadow: 
+            0 0 0.5px #fff, 
+            0 0 3px #fff, 
+            0 0 7px #fff, 
+            0 0 7px #fc4c4c, 
+            0 0 10px #fc4c4c, 
+            0 0 20px #fc4c4c, 
+            0 0 30px #fc4c4c, 
+            0 0 50px #fc4c4c,
+            0 0 90px #fc4c4c;
+            font-family:arial; 
+            font-size: 10pt;
+            text-decoration: none;
+        }
+    	
+        ul {
+            list-style-type: none;
+            padding: 0 0px;
+            margin: 0 0px;
+        } 
+        
+        li {
+            list-style-type: none;
+        } 
+        .vote a{ 
+            color: #FFFFFF;
+            text-shadow: 
+            0 0 0.5px #fff, 
+            0 0 1px #fff, 
+            0 0 2px #ffff00, 
+            0 0 3px #ffff00, 
+            0 0 5px #ffff00, 
+            0 0 7px #ffff00, 
+            0 0 10px #ffff00, 
+            0 0 15px #ffff00;
+            0 0 20px #ffff00;
+            font-family:arial; 
+            font-size: 14pt;
+            text-decoration: none;
+        }
+        
+        .transparent {
+            opacity:0.01;
+        }
+    
+        .tableCenter{
+          margin: 5px 0;
+          padding: 5px;
+          clear: both;
+          text-align: center;
+          overflow:hidden;
+        }
+        .table{
+          display: inline-block;
+          padding: 1px;
+        }
+
+        .title{
+            color: #FFFFFF;
+            text-shadow: 
+            0 0 0.5px #fff, 
+            0 0 0.7px #fff, 
+            0 0 1px #fff, 
+            0 0 2px #eaff00, 
+            0 0 3px #eaff00, 
+            0 0 7px #eaff00, 
+            0 0 10px #eaff00, 
+            0 0 15px #eaff00; 
+            font-family:arial; 
+            font-size: 16pt;
+            font-weight:bold;
+            text-decoration: none;
+            margin: 0 0;
+            clear:both;
+        }
+        
+    	
+     </style>
+ 
+ </head>
+
+
+<body class="body" style="background-color:#25383C;">
+  
+ <header> 
+   <div style="text-align: center">
+          <li class = "title">DOGERCADE HIGH SCORE</li>
+          <li class = "title">- - - - - - - - - - - - - - - - - - - - -</li>
+  </div>
+ </header> 
+  
+  <div class = "tableCenter"> 
+    <div class = "table">
+      <div id="Vote" class = "vote" style="text-align: center">
+      {% for entry in vote_entry %} 
+        <li><a href="/entries/{{ entry.id }}/"><span id="entry-text">{{ entry.text }}</span> <span id="score">{{ entry.score }}</span></a></li>
+
+    <li class = "title" style="text-align: center">- - - - - - - - - - - - - - - - - - - -</li>
+      
+        <input type="submit" id="voteid" name='voteid' value="{{ entry.id }}" autofocus value="" onfocus="this.value = this.value;" class = "transparent"/>
+        
+        <div class="buttons">
+            
+            <button class="buttonup" type="button" onclick="voteUp({{ entry.id }});" name='voteupid' id="voteupid" value="{{ entry.id }}"><span class="buttontextup">Vote Up</span></button>
+            
+            <button class="buttondown" type="button" onclick="voteDown({{ entry.id }});" name='votedownid' id="votedownid" value="{{ entry.id }}"><span class="buttontextdown">Vote Down</span></button>
+            
+        </div>
+              <script>
+                $(document).ready(function() {
+                var currentid = {{entry.id}}; //entry id is defined
+                  $("#voteid").bind("keydown", function(e) {
+                    if (e.keyCode == 38) {	//up arrow key
+                      var args = {'voteid':currentid };	//current id is used
+                      $.get("/voteup/", args).done(function(data) { //when .get is done, returns data from views(score)                   
+                        $("#score").text(data); //span updates score with new value from views
+                        location.reload();
+                      });
+                    return false;
+                    }
+                    if (e.keyCode == 40) { //down arrow key
+                      var args = {'voteid':currentid };		//current id is used
+                      $.get("/votedown/", args).done(function(data) { //when .get is done, returns data from views(score)  
+                        $("#score").text(data);	//span updates score with new value from views
+                        location.reload();
+                      });
+                    return false;
+                    }
+                    if(e.keyCode == 39) { //right key
+                      $.get("/vote-entry/", {}).done(function(data) {
+                        var parts = data.split(",");
+                        $("#entry-text").text(parts[1]);
+                        $("#score").text(parts[2]);
+                        currentid = parts[0];
+                      });
+                     return false; 
+                     }
+                    if(e.keyCode == 37) { //left key
+                      $.get("/vote-entry/", {}).done(function(data) {
+                        var parts = data.split(",");
+                        $("#entry-text").text(parts[1]);
+                        $("#score").text(parts[2]);
+                        currentid = parts[0];
+                      });
+                     return false; 
+                     }			
+                  });
+                });		
+              </script>
+         {% endfor %}
+          </div>
+      </div>     
+  </div>
+    
+</body> 
+  
+</html> 

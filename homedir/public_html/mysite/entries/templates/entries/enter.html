@@ -1,0 +1,124 @@
+ <!doctype html>
+ <html style="background-color: #25383C;">
+ <html lang="en">
+ 
+ <head>
+    <meta charset="utf-8"> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <meta name="High Score Enter"> 
+    <!--<link rel="stylesheet" href="css/style.css?v=1">-->
+    
+        <style type="text/css" media="screen"> <!--needed???-->
+        
+        .enter a{ 
+            float:center;
+            clear:both;   
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0 0px;
+            margin: 0 0px;
+        } 
+        
+        li {
+            list-style-type: none;
+        }
+        
+        input[type='text'] { 
+            color: #FFFFFF;
+            text-shadow: 
+            0 0 0.1px #fff, 
+            0 0 0.5px #fff, 
+            0 0 0.7px #00ffff, 
+            0 0 1px #00ffff, 
+            0 0 2px #00ffff, 
+            0 0 3px #00ffff, 
+            0 0 4px #00ffff, 
+            0 0 5px #00ffff;
+            font-family:arial; 
+            font-size: 13pt;
+            font-weight:bold;
+            text-decoration: none;
+          }
+        ::placeholder { 
+            color: #FFFFFF;
+            text-shadow: 
+            0 0 0.1px #fff, 
+            0 0 0.5px #fff, 
+            0 0 0.7px #00ffff, 
+            0 0 1px #00ffff, 
+            0 0 2px #00ffff, 
+            0 0 3px #00ffff, 
+            0 0 4px #00ffff, 
+            0 0 5px #00ffff; 
+            font-family:arial; 
+            font-size: 11pt;
+            font-weight:bold;
+            text-decoration: none;
+          }
+          
+        .title{
+            color: #FFFFFF;
+            text-shadow: 
+            0 0 0.5px #fff, 
+            0 0 0.7px #fff, 
+            0 0 1px #fff, 
+            0 0 2px #eaff00, 
+            0 0 3px #eaff00, 
+            0 0 7px #eaff00, 
+            0 0 10px #eaff00, 
+            0 0 15px #eaff00; 
+            font-family:arial; 
+            font-size: 16pt;
+            font-weight:bold;
+            text-decoration: none;
+            margin: 0 0;
+            clear:both;
+        }
+     </style>
+ </head>
+
+<body class="body" style="background-color:#25383C;">
+  
+ <header> 
+   <div style="text-align: center">
+          <li class = "title">DOGERCADE HIGH SCORE</li>
+          <li class = "title">- - - - - - - - - - - - - - - - - - - - -</li>
+  </div>
+ </header> 
+
+  <p>
+  <div id="Enter" class = "enter">
+     <div style="text-align: center">
+     <input type="text" name="text" placeholder = " Enter Up To 15 Characters Here ..." autofocus value="" onfocus="this.value = this.value;"id="input" maxlength="15" autocomplete="off" style="background-color: transparent;  border: none;"/>
+      	<script>
+          console.log("hi from js");
+          $(document).ready(function() {
+            $("#input").bind("keypress", function(e) { //input type=text above
+              if (event.keyCode == 32) {
+                 return false;
+              }
+              if (e.keyCode == 13) {
+                var text = $("#input").val();	
+                var args = {'text':text};
+		var trimmedValue = jQuery.trim($('#input').val());
+                if (trimmedValue.length > 0) {	
+                  $.get("/add/", args).done(function(data) {
+                    location.reload();	
+                  });
+                }
+              return false;
+              }	
+            });
+          });	
+        </script>
+      </div>
+  </div>	
+  <p>
+    
+    <li class = "title" style="text-align: center">
+      - - - - - - - - - - - - - - - - - - - - -</li>
+</body> 
+  
+</html> 

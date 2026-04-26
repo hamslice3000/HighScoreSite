@@ -1,0 +1,62 @@
+ <!doctype html>
+ <html lang="en">
+ 
+ <head>
+    <meta charset="utf-8"> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <meta name="High Score"> 
+ </head>
+
+
+<body class="body" style="background-color:#25383C;">
+  
+
+<style type="text/css" media="screen">
+    .top a{ 
+        color: #FFFFFF;
+        text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 5px #fff, 
+        0 0 10px #00FF00, 0 0 50px #00FF00, 0 0 80px #00FF00, 
+        0 0 100px #00FF00, 0 0 150px #00FF00; 
+        font-family:arial; 
+        font-size: 100pt;
+        font-weight:bold;
+        text-decoration: none;
+        margin: 0 auto;
+        clear:both;
+    } 
+    ul {
+        list-style-type: none;
+        padding: 0 0px;
+        margin: 0 0px;
+    }    
+    li {
+        list-style-type: none;
+    } 
+</style>
+
+ <script>
+  setTimeout(function() {
+    $.ajax({      
+        url: "",
+        context: document.body,
+        success: function(s,x){
+            $(this).html(s);
+        }
+    });
+   }, 100);
+ </script>
+
+ <p>
+ <header> 
+      <div style="text-align: center">
+        {% for entry in high_entry %}
+          <li class = "top"><a href="/entries/{{ entry.id }}/">{{ entry.text }}&nbsp;&nbsp;&nbsp;&nbsp;{{ entry.score }}</a></li>
+        {% endfor %}
+        </div>
+ </header> 
+
+ 
+</body> 
+  
+</html>
+

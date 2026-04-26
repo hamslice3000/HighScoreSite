@@ -1,0 +1,199 @@
+ <!doctype html>
+ <html lang="en">
+ 
+ <head>
+    <meta charset="utf-8"> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <meta name="High Score"> 
+    
+    <style type="text/css" media="screen">
+        .lat a{ 
+            color: #FFFFFF;
+            text-shadow: 
+            0 0 0.5px #fff, 
+            0 0 1px #fff, 
+            0 0 3px #fff, 
+            0 0 5px #00FFFF, 
+            0 0 10px #00FFFF, 
+            0 0 20px #00FFFF, 
+            0 0 30px #00FFFF, 
+            0 0 50px #00FFFF; 
+            font-family:arial; 
+            font-size: 20pt;
+            font-weight:bold;
+            text-decoration: none;
+            margin: 0 auto;
+            clear:both;
+        } 
+        .lot a{ 
+            color: #FFFFFF;
+            text-shadow: 
+            0 0 0.5px #fff, 
+            0 0 1px #fff, 
+            0 0 3px #fff, 
+            0 0 5px #FFFFFF, 
+            0 0 10px #BF5FFF, 
+            0 0 20px #BF5FFF, 
+            0 0 30px #BF5FFF, 
+            0 0 50px #BF5FFF; 
+            font-family:arial; 
+            font-size: 20pt;
+            font-weight:bold;
+            text-decoration: none;
+            margin: 0 0;
+            clear:both;
+        }
+        .low a{ 
+            color: #FFFFFF;
+            text-shadow: 
+            0 0 0.5px #fff, 
+            0 0 1px #fff, 
+            0 0 3px #fff, 
+            0 0 5px #ff4c4c, 
+            0 0 10px #ff4c4c, 
+            0 0 20px #ff4c4c, 
+            0 0 30px #ff4c4c, 
+            0 0 50px #ff4c4c; 
+            font-family:arial; 
+            font-size: 20pt;
+            font-weight:bold;
+            text-decoration: none;
+            margin: 0 auto;
+            clear:both;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0 0px;
+            margin: 0 0px;
+        }    
+        li {
+            list-style-type: none;
+        }
+        .tableLeft{
+          display: inline-block;
+          text-align: left;
+          padding: 10px;
+        }
+        .tableRight{
+          display: inline-block;
+          text-align: right;
+          padding: 10px;
+        }
+        .tableCenter{
+          display: block;
+          margin: auto;
+          text-align: center;
+          -webkit-animation: pulsate 5s ease-out;
+          -webkit-animation-iteration-count: infinite; 
+          opacity: 0.0
+        }
+    
+        @-webkit-keyframes pulsate {
+          0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.5;}
+          50% {opacity: 3.0;}
+          100% {-webkit-transform: scale(2.0, 2.0); opacity: 1.0;}
+        }
+        
+        .title{
+            color: #FFFFFF;
+            text-shadow: 
+            0 0 0.5px #fff, 
+            0 0 0.7px #fff, 
+            0 0 1px #fff, 
+            0 0 2px #eaff00, 
+            0 0 3px #eaff00, 
+            0 0 7px #eaff00, 
+            0 0 10px #eaff00, 
+            0 0 15px #eaff00; 
+            font-family:arial; 
+            font-size: 26pt;
+            font-weight:bold;
+            text-decoration: none;
+            margin: 0 0;
+            clear:both;
+        }
+        
+        .header{
+          display: block;
+          margin: auto;
+          text-align: center;
+          -webkit-animation: pulsatefade 5s ease-out;
+          -webkit-animation-iteration-count: infinite; 
+          opacity: 0.0
+        }
+        
+        @-webkit-keyframes pulsatefade {
+          0% {-webkit-transform: scale(1, 1); opacity: 1.0;}
+          50% {opacity: 3.0;}
+          100% {-webkit-transform: scale(0.5, 0.5); opacity: 0.0;}
+        }
+        
+        .body{
+            background-color:#25383C; 
+            pointer-events: none;
+        }
+     
+    </style>
+
+ </head>
+
+
+<body class="body">
+
+
+   <div class="header">
+          <li class = "title">DOGERCADE HIGH SCORE</li>
+          <li class = "title">- - - - - - - - - - - - - - - - - - - - - - </li>
+  </div>
+
+   <div id="latest" class = "tableCenter">
+      {% for entry in latest_entry %}
+        <li class = "lat"> <a> {{"***** LATEST ENTRY *****"}}</a> </li>
+        <li class = "lat"><a href="/entries/{{ entry.id }}/"> <span id="entry-text">{{ entry.text }}</span> <span id="score">{{ entry.score }}</span></a></li>
+      {% endfor %}
+    </div>
+
+
+
+     <div id="Random_Entry" class = "tableCenter">
+      {% for entry in lottery_winner %}
+        <li class = "lot"> <a> {{"***** RANDOM ENTRY *****"}}</a> </li>
+        <li class = "lot"><a href="/entries/{{ entry.id }}/"> <span id="entry-text">{{ entry.text }}</span> <span id="score">{{ entry.score }}</span></a></li>
+        <script>
+          $(document).ready(function() {
+            var currentid = {{entry.id}};
+            var args = {'lotteryid':currentid};
+            $.get("/lotteryWinner/", args).done(function(data) {
+                    $("#score").text(data);     
+               });
+           });
+        </script>
+      {% endfor %}
+      </div>
+
+
+
+   <div id="lowest" class = "tableCenter">
+      {% for entry in lowest_entry %}
+        <li class = "low"> <a> {{"***** LOWEST ENTRY *****"}}</a> </li>
+        <li class = "low"><a href="/entries/{{ entry.id }}/"> <span id="entry-text">{{ entry.text }}</span> <span id="score">{{ entry.score }}</span></a></li>
+      {% endfor %}
+    </div>
+
+ <script>
+ 
+  window.setTimeout(win, 10000);
+
+  function win(){
+      $.ajax({      
+          url: "",
+          context: document.getElementById("lottery_Winner"),
+          success: function(data){
+             $("#lottery_Winner").html(data);
+          }
+      });
+    }
+ 
+</body> 
+  
+</html>

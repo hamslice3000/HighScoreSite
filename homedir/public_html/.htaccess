@@ -1,0 +1,19 @@
+RewriteEngine on
+Header always unset X-Frame-Options
+#PassengerEnabled On
+#PassengerAppRoot /home/highscor/public_html/mysite/
+RewriteCond %{HTTP_REFERER} !^http://highscore.a2hosted.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://highscore.a2hosted.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.highscore.a2hosted.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.highscore.a2hosted.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://highscore.a2hosted.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://highscore.a2hosted.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.highscore.a2hosted.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.highscore.a2hosted.com$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/highscor/public_html/mysite"
+PassengerBaseURI "/"
+PassengerPython "/home/highscor/virtualenv/public_html/mysite/2.7/bin/python"
+PassengerAppLogFile "/home/highscor/public_html/mysite/passenger.log"
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END

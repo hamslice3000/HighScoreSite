@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <meta charset="utf-8"> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <meta name="High Score"> 
+    <!--<link rel="stylesheet" href="css/style.css?v=1">-->
+</head>
+ 
+<body class="body" style="background-color:#25383C;">
+
+ <style type="text/css" media="screen">
+
+    .low a{ 
+        color: #FFFFFF;
+        text-shadow: 0 0 0.5px #fff, 0 0 1px #fff, 0 0 2px #ff4c4c, 
+        0 0 3px #ff4c4c, 0 0 5px #ff4c4c, 0 0 7px #ff4c4c, 
+        0 0 15px #ff4c4c, 0 0 30px #ff4c4c, 0 0 50px #ff4c4c; 
+        font-family:arial; 
+        font-size: 18pt;
+        font-weight:bold;
+        text-decoration: none;
+    }
+ 
+    ul {
+        list-style-type: none;
+        padding: 0 0px;
+        margin: 0 0px;
+    }  
+    li {
+        list-style-type: none;
+    }  
+    .table{
+      display: inline-block;
+      padding: 40px;
+    }
+  
+ </style>
+ 
+ <div id="lowTable" class = "table">            
+      {% for entrylow in low_entry_list %}
+        <li><a href="/entries/{{ entrylow.id }}/">
+        <div class = "low" style = "text-align: left";>{{ entrylow.text }}
+        &nbsp;&nbsp;&nbsp;&nbsp;<div style="float: right">{{ entrylow.score }}</div></a></li>
+      {% endfor %}
+      </div>
+  
+ <script>
+
+  setTimeout(function() {
+    $.ajax({      
+        url: "",
+        context: document.body,
+        success: function(s,x){
+            $(this).html(s);
+        }
+    });
+   }, 1000);
+
+ </script>
+ 
+</body> 
+  
+</html>
+

@@ -1,0 +1,28 @@
+App 2545019 output: [ pid=2545019, time=2022-07-12 18:53:11,729 ]: /home/highscor/virtualenv/public_html/mysite/2.7/lib/python2.7/site-packages/django/db/models/fields/__init__.py:903: RuntimeWarning: DateTimeField Entry.pub_date received a naive datetime (2022-07-12 18:53:11.729008) while time zone support is active.
+App 2545019 output:   RuntimeWarning)
+App 3859203 output: [ pid=3859203, time=2022-07-21 08:27:42,035 ]: /home/highscor/virtualenv/public_html/mysite/2.7/lib/python2.7/site-packages/django/db/models/fields/__init__.py:903: RuntimeWarning: DateTimeField Entry.pub_date received a naive datetime (2022-07-21 08:27:42.034144) while time zone support is active.
+App 3859203 output:   RuntimeWarning)
+App 3859203 output: [ pid=3859203, time=2022-07-21 08:27:57,102 ]: /home/highscor/virtualenv/public_html/mysite/2.7/lib/python2.7/site-packages/django/db/models/fields/__init__.py:903: RuntimeWarning: DateTimeField Entry.pub_date received a naive datetime (2022-07-21 08:27:57.101540) while time zone support is active.
+App 3859203 output:   RuntimeWarning)
+App 3859203 output: [ pid=3859203, time=2022-07-21 08:28:06,872 ]: /home/highscor/virtualenv/public_html/mysite/2.7/lib/python2.7/site-packages/django/db/models/fields/__init__.py:903: RuntimeWarning: DateTimeField Entry.pub_date received a naive datetime (2022-07-21 08:28:06.872281) while time zone support is active.
+App 3859203 output:   RuntimeWarning)
+App 981392 output: [ pid=981392, time=2023-02-02 14:54:31,944 ]: /home/highscor/virtualenv/public_html/mysite/2.7/lib/python2.7/site-packages/django/db/models/fields/__init__.py:903: RuntimeWarning: DateTimeField Entry.pub_date received a naive datetime (2023-02-02 14:54:31.942878) while time zone support is active.
+App 981392 output:   RuntimeWarning)
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 7, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.
+[UID:1253][2277949] Reached max children process limit: 6, extra: 2, current: 8, busy: 8, please increase LSAPI_CHILDREN.

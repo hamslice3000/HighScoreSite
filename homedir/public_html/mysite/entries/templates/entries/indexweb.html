@@ -1,0 +1,288 @@
+ <!doctype html>
+ <html lang="en">
+ 
+ <head>
+    <meta charset="utf-8"> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <meta name="High Score"> 
+    <!--<link rel="stylesheet" href="css/style.css?v=1">-->
+ </head>
+
+
+<body class="body" style="background-color:#25383C;">
+  
+
+<style type="text/css" media="screen">
+
+    .body {
+        margin:0;
+        padding:0;
+    }
+    .container{
+        position:relative;
+        width:100%;
+    }
+    .right{
+        position:absolute;
+        right:0px;
+        width:300px;
+    }
+    .top a{ 
+        color: #FFFFFF;
+        text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 1px #00FF00, 0 0 50px #00FF00, 0 0 80px #00FF00, 0 0 100px #00FF00, 0 0 150px #00FF00; 
+        font-family:arial; 
+        font-size: 48pt;
+        font-weight:bold;
+        text-decoration: none;
+        margin: 0 auto;
+        clear:both;
+    }
+    .latest a{ 
+        color: #FFFFFF;
+        text-shadow: 0 0 0.2px #fff, 0 0 0.3px #fff, 0 0 0.5px #00ffff, 0 0 0.75px #00ffff, 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;  
+        font-family:arial; 
+        font-size: 18pt;
+        font-weight:bold;
+        text-decoration: none;
+        margin-left:auto; 
+        margin-right:auto;
+    }
+    .low a{ 
+        color: #FFFFFF;
+        text-shadow: 0 0 0.2px #fff, 0 0 0.5px #fff, 0 0 1px #ff4c4c, 0 0 3px #ff4c4c, 0 0 5px #ff4c4c, 0 0 7px #ff4c4c, 0 0 10px #ff4c4c, 0 0 15px #ff4c4c, 0 0 30px #ff4c4c; 
+        font-family:arial; 
+        font-size: 18pt;
+        font-weight:bold;
+        text-decoration: none;
+    }
+    .high a{ 
+        color: #FFFFFF;
+        text-shadow: 0 0 0.2px #fff, 0 0 0.5px #fff, 0 0 0.75px #00ff00, 0 0 1px #00ff00, 0 0 3px #00ff00, 0 0 5px #00ff00, 0 0 7px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;  
+        font-family:arial; 
+        font-size: 18pt;
+        font-weight:bold;
+        text-decoration: none;
+    }
+    .vote a{ 
+        color: #FFFFFF;
+        text-shadow: 0 0 0.1px #fff, 0 0 0.2px #fff, 0 0 0.5px #ffff00, 0 0 1px #ffff00, 0 0 2px #ffff00, 0 0 3px #ffff00, 0 0 5px #ffff00, 0 0 7px #ffff00, 0 0 10px #ffff00;  
+        font-family:arial; 
+        font-size: 18pt;
+        font-weight:bold;
+        text-decoration: none;
+        float:center;
+        clear:both;
+    }
+    
+    .enter a{ 
+        float:center;
+        clear:both;   
+    }
+    
+    submit{
+    }
+    
+    ul {
+        list-style-type: none;
+        padding: 0 0px;
+        margin: 0 0px;
+    } 
+    
+    li {
+        list-style-type: none;
+    }
+    
+    input[type='text'] { 
+        color: #FFFFFF;
+        text-shadow: 0 0 0.2px #fff, 0 0 0.5px #fff, 0 0 0.75px #00ff00, 0 0 1px #00ff00, 0 0 3px #00ff00, 0 0 5px #00ff00, 0 0 7px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00; 
+        font-family:arial; 
+        font-size: 18pt;
+        font-weight:bold;
+        text-decoration: none;
+      }
+
+    .up-arrow {
+        width: 0; 
+        height: 0; 
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;   
+        border-bottom: 10px solid #117300;
+    } 
+    .down-arrow {
+        width: 0; 
+        height: 0; 
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid #006699;
+    }
+    
+    .myButtonDown {
+        background:url("images/ArrowDown.PNG") no-repeat;
+        border: none;
+        cursor:pointer;
+        width: 36px;
+        height: 36px;
+    }
+    
+    .awesomeG{
+      display: inline-block;
+      background-color: #33FF33;
+      padding: 5px 10px 6px;
+      color: #fff;
+      text-decoration: none; 
+      font-weight: bold;
+      line-height: 1;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-box-shadow: 0 0 0.1px #fff, 0 0 0.2px #fff, 0 0 0.3px #00ff00, 0 0 0.5px #00ff00, 0 0 1px #00ff00, 0 0 2px #00ff00, 0 0 5px #00ff00, 0 0 7px #00ff00, 0 0 15px #00ff00;
+      -webkit-box-shadow: 0 0 0.1px #fff, 0 0 0.2px #fff, 0 0 0.3px #00ff00, 0 0 0.5px #00ff00, 0 0 1px #00ff00, 0 0 2px #00ff00, 0 0 5px #00ff00, 0 0 7px #00ff00, 0 0 15px #00ff00;
+      text-shadow: 0 0 0.1px #fff, 0 0 0.2px #fff, 0 0 0.3px #00ff00, 0 0 0.5px #00ff00, 0 0 1px #00ff00, 0 0 2px #00ff00, 0 0 3px #00ff00, 0 0 5px #00ff00, 0 0 7px #00ff00; 
+      border-bottom: 1px solid #222;
+      position: relative;
+      cursor: pointer;
+    }
+    
+    .awesomeR{
+      display: inline-block;
+      background-color: #FF0000;
+      padding: 5px 10px 6px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      line-height: 1;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-box-shadow: 0 0 0.1px #fff, 0 0 0.2px #fff, 0 0 0.3px #ff4c4c, 0 0 0.5px #ff4c4c, 0 0 1px #ff4c4c, 0 0 2px #ff4c4c, 0 0 5px #ff4c4c, 0 0 7px #ff4c4c, 0 0 15px #ff4c4c; 
+      -webkit-box-shadow: 0 0 0.1px #fff, 0 0 0.2px #fff, 0 0 0.3px #ff4c4c, 0 0 0.5px #ff4c4c, 0 0 1px #ff4c4c, 0 0 2px #ff4c4c, 0 0 5px #ff4c4c, 0 0 7px #ff4c4c, 0 0 15px #ff4c4c; 
+      text-shadow: 0 0 0.1px #fff, 0 0 0.2px #fff, 0 0 0.3px #ff4c4c, 0 0 0.5px #ff4c4c, 0 0 1px #ff4c4c, 0 0 2px #ff4c4c, 0 0 3px #ff4c4c, 0 0 5px #ff4c4c, 0 0 7px #ff4c4c; 
+      border-bottom: 1px solid #222;
+      position: relative;
+      cursor: pointer;
+    }
+
+    -webkit-keyframes greenPulse {
+      from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+      50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+      to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+    }
+    
+    .green.button {
+      -webkit-animation-name: greenPulse;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+    }
+    
+    .tableCenter{
+      margin: 30px 0;
+      padding: 20px;
+      clear: both;
+      text-align: center;
+      overflow:hidden;
+    }
+
+    .table{
+      /*margin-right: auto;
+      margin-left: auto;
+      float:left;*/
+      display: inline-block;
+      padding: 40px;
+    }
+  
+</style>
+      <header> 
+      <!--<h1> HIGH SCORE<h1>-->
+      <div style="text-align: center">
+        {% for entry in high_entry %}
+          <li class = "top"><a href="/entries/{{ entry.id }}/">{{ entry.text }}&nbsp;&nbsp;&nbsp;&nbsp;{{ entry.score }}</a></li>
+        {% endfor %}
+        </div>
+      </header> 
+  <p>
+      <div id="Enter" class = "enter">
+      <div style="text-align: center">
+        <input type="text" name="text" autofocus value="" onfocus="this.value = this.value;"id="input" maxlength="15" style="background-color: transparent;  border: none;"/>
+      	<script>
+          console.log("hi from js");
+          $(document).ready(function() {
+            $("#input").bind("keypress", function(e) {
+              if (e.keyCode == 13) {
+                var text = $("#input").val();		
+                var args = {'text':text};			
+                $.get("/add/", args).done(function(data) {
+                  //alert( "entered" );
+                  console.log("message: " + data);
+                  location.reload();	
+                });
+              return false;
+              }	
+            });
+          });	
+        </script>
+        </div>
+    </div>	
+  <p>
+  <p> 
+    <div id="Vote">
+      <div style="text-align: center">
+      {% for entry in voting_entry_list %} 
+        <li class = "vote"><a href="/entries/{{ entry.id }}/">{{ entry.text }}&nbsp{{ entry.score }}</a></li>
+        <p>
+        <li><form method="POST" action="/vote/" >
+        {% csrf_token %}
+        <div>
+          <input type="hidden" name="voteid" value="{{ entry.id }}" />
+          <input type="submit" name='voteupweb' value="^" class = "awesomeG"/>
+          <input type="submit" name='votedownweb' value="v" class = "awesomeR"/>
+          <!--<input type="submit" name='votedown2' value="Down2" class="myButtonDown"/>-->
+          </form><li>
+          </div>
+      {% endfor %}
+      </div>
+     </div> 
+        
+   <div class = "tableCenter">
+    <div class = "table">
+      {% for entry in high_entry_list %}
+        <li><a href="/entries/{{ entry.id }}/"> <div class = "high" style = "text-align: left";>{{ entry.text }}&nbsp;&nbsp;&nbsp;&nbsp;<div style="float: right">{{ entry.score }}</div></a></li>
+      {% endfor %}
+     </div>
+     
+     <div class = "table">
+      {% for entry in latest_entry_list %}
+        <li><a href="/entries/{{ entry.id }}/"><div class = "latest" style = "text-align: left";>{{ entry.text }}&nbsp;&nbsp;&nbsp;&nbsp;<div style="float: right">{{ entry.score }}</div></a></li>
+      {% endfor %}
+     </div>
+      
+     <div class = "table">            
+      {% for entry in low_entry_list %}
+        <li><a href="/entries/{{ entry.id }}/"><div class = "low" style = "text-align: left";>{{ entry.text }}&nbsp;&nbsp;&nbsp;&nbsp;<div style="float: right">{{ entry.score }}</div></a></li>
+      {% endfor %}
+      </div>
+     </div>
+
+     <script>
+
+  setTimeout(function() {
+    $.ajax({      
+        url: "",
+        context: document.body,
+        success: function(s,x){
+            $(this).html(s);
+        }
+    });
+   }, 2000);
+
+ </script>
+
+<!--<style type="text/css" media="screen">
+	  div h2 span { color: #ff0000; }
+	  div span { color: #00ff00; }
+	  #box { width: 400px; height: 400px; }
+	  #h { color: #ff0000; }
+	</style>
+	<h3 id="h">title</h3>-->
+ 
+</body> 
+  
+</html>
+

@@ -1,0 +1,18 @@
+--- 
+documentroot: /home/highscor/public_html
+group: highscor
+hascgi: 0
+homedir: /home/highscor
+ip: 75.98.175.71
+ipv6: ~
+owner: root
+phpopenbasedirprotect: ~
+port: 443
+secruleengineoff: 1
+serveradmin: webmaster@highscore.a2hosted.com
+serveralias: mail.highscore.a2hosted.com www.highscore.a2hosted.com
+servername: highscore.a2hosted.com
+ssl: 1
+usecanonicalname: 'Off'
+user: highscor
+userdirprotect: ''
