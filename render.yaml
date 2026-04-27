@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: highscore-site
+    env: python
+    rootDir: homedir/public_html/mysite
+    buildCommand: pip install -r requirements.txt; python manage.py collectstatic --noinput; python manage.py migrate
+    startCommand: gunicorn mysite.wsgi:application
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: your-service.onrender.com,yourdomain.com
+      - key: CSRF_TRUSTED_ORIGINS
+        value: https://your-service.onrender.com,https://yourdomain.com
+      - key: DB_HOST
+        value: aws-0-eu-west-1.pooler.supabase.com
+      - key: DB_PORT
+        value: "5432"
+      - key: DB_NAME
+        value: postgres
+      - key: DB_USER
+        value: postgres.xnuygumbiufjcirdvmmt
+      - key: DB_PASSWORD
+        sync: false

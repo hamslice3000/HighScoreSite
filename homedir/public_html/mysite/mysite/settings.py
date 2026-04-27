@@ -16,13 +16,26 @@ if _env_path.exists():
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+def _env_bool(name, default=False):
+    value = os.environ.get(name)
+    if value is None:
+        return default
+    return value.strip().lower() in {"1", "true", "yes", "on"}
+
+
+def _env_list(name, default=""):
+    raw = os.environ.get(name, default)
+    return [item.strip() for item in raw.split(",") if item.strip()]
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "_%#l#jcu*(1!vlyuah_0ijlgfv9^+i6i10b_z5jk7o$6e%7*h4"
+SECRET_KEY = os.environ.get("SECRET_KEY", "_%#l#jcu*(1!vlyuah_0ijlgfv9^+i6i10b_z5jk7o$6e%7*h4")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = _env_bool("DEBUG", False)
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = _env_list("ALLOWED_HOSTS", "localhost,127.0.0.1")
+CSRF_TRUSTED_ORIGINS = _env_list("CSRF_TRUSTED_ORIGINS", "")
 
 
 INSTALLED_APPS = [
@@ -37,6 +50,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -95,7 +109,10 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = "http://highscore.a2hosted.com/mysite/public/static/"
-STATIC_ROOT = "/home/highscor/public_html/mysite/public/static/"
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
