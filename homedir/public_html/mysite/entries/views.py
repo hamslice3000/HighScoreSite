@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect # redirect needed for back to index after voting
 from entries.models import Entry # imports model class and manager
-from datetime import datetime # needed for datetime in add below
 from django.utils import timezone # timezone needed for datetime
 from django.views.decorators.csrf import csrf_protect # protection decorator for POST get
 
@@ -79,7 +78,7 @@ def indexLat(request):
     return render(request, 'entries/indexLat.html', context);
     
 def add(request):
-    created_date = default=datetime.now()
+    created_date = timezone.now()
     created_text = request.GET.get('text')    
     e = Entry(text=created_text,pub_date=created_date) 
     e.save()       
