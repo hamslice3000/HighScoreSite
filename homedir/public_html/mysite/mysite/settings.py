@@ -29,7 +29,9 @@ def _env_list(name, default=""):
     return [item.strip() for item in raw.split(",") if item.strip()]
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY", "_%#l#jcu*(1!vlyuah_0ijlgfv9^+i6i10b_z5jk7o$6e%7*h4")
+SECRET_KEY = os.environ.get("SECRET_KEY")
+if not SECRET_KEY:
+    raise RuntimeError("SECRET_KEY environment variable is required")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = _env_bool("DEBUG", False)
