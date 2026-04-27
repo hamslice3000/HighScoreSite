@@ -117,4 +117,6 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
+X_FRAME_OPTIONS = "ALLOW-FROM https://dogeparty.tokenscan.io"
+
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
